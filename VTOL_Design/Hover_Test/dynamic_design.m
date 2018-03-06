@@ -20,7 +20,6 @@ frcs=[rx; ry; 0];
 dv=1/m*(RIB*f+frcs)-[0 0 g];
 dphi=(w(1)*cos(psi)-w(2)*sin(psi))/cos(theta);
 dtheta=w(1)*sin(psi)+w(2)*cos(psi);
-dpsi=(-w(1)*cos(psi)+w(2)*sin(psi))*cos(theta)+w(3);
-
+dpsi=(-w(1)*tan(theta)*cos(psi)+w(2)*sin(psi))*tan(theta)+w(3);
 dw=I\(cross(-w,I*w)+RIB*(cross(rn,f)+cross(rr,frcs)));
 
